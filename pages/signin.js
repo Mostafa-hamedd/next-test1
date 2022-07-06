@@ -100,13 +100,7 @@ const Signin = ({ handleChange }) => {
           </Formik>
           <Typography>
           <Link href="/">Forgot password ?</Link>
-          </Typography>
-          {/* <Typography> 
-            Do you have an account ?
-            <Link href="#" onClick={() => handleChange("event", 1)}>
-              Sign Up
-            </Link>
-          </Typography> */}
+          </Typography> 
         </Paper> 
       </Grid>
     </div>
