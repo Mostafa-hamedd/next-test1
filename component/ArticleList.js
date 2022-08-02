@@ -5,12 +5,12 @@ import articleStyle from '../styles/Article.module.css'
 const ArticleList = ({articles}) => {
   return (
     <div className={articleStyle.grid}>
-    {articles&&articles?.map((article , id) => ( 
-      <div key={id} className={articleStyle.grid}> 
-        <ArticleItems article={article} /> 
-      </div>  
-    ))}
-    </div
+      {articles&&articles?.map((article , id) => ( 
+        <div key={id} className={articleStyle.grid}> 
+          <ArticleItems article={article} /> 
+        </div>  
+      ))}
+    </div>
   )
 }
 
