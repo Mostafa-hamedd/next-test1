@@ -31,6 +31,13 @@ const Nav = () => {
             </a>
           </Link>
         </li>
+        <li>
+          <Link href='/MacApi'>
+            <a className={asPath === '/MacApi' ?  "active" : ""}>
+              MacApi 
+            </a>
+          </Link>
+        </li>
       </ul>
     </nav>
   )

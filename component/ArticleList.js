@@ -10,7 +10,7 @@ const ArticleList = ({articles}) => {
         <ArticleItems article={article} /> 
       </div>  
     ))}
-    </div>
+    </div
   )
 }
 

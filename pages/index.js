@@ -8,12 +8,13 @@ const fetchArticle = async () => {
   return res.json()
 }
 
-export default function Home({}) {
+export default function Home() {
 
   // const {data , status} = useQuery("articles" , getStaticProps) 
   const [articles, setArticles] = useState()
+
   const { data, isSuccess, isLoading, isError } = 
-  useQuery('recipes', fetchArticle)
+  useQuery('articles', fetchArticle)
 
   
   useEffect(() => {
@@ -32,14 +33,13 @@ export default function Home({}) {
    return (
     <div>  
       <ArticleList  articles={articles}/> 
-      {articles&&articles[1]?.id}
     </div>
     )
   }
 
-  export async function getServerSideProps({ locale }) {
+  export async function getServerSideProps() {
     const queryClient = new QueryClient()
-    await queryClient.prefetchQuery(['recipes', locale], fetchArticle)
+    await queryClient.prefetchQuery(['articles'], fetchArticle)
     return {
       props: {
         dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
