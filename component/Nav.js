@@ -38,9 +38,18 @@ const Nav = () => {
             </a>
           </Link>
         </li>
+        <li>
+          <Link href='/filter'>
+            <a className={asPath === '/filter' ?  "active" : ""}>
+            filter 
+            </a>
+          </Link>
+        </li>
       </ul>
     </nav>
   )
 }
 
 export default Nav
+
+ 
