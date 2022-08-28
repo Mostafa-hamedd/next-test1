@@ -7,6 +7,7 @@ function ProductSearch({productsData , setSelectedProduct,categoryData}) {
   const [productsSelect, setProductsSelect] = useState("")
   const [categoryProducts, setCategoryProducts] = useState()
   const [productsOptions, setProductsOptions] = useState()
+  const [search, setSearch] = useState('')
   // const [recipesOptions, setRecipesOptions] = useState()
  
   const productRef = useRef() 
@@ -60,6 +61,29 @@ useEffect(() => {
     setSelectedProduct([selectedProduct])
   }
 
+  // const searchInput = (e) => {
+  //   setSearch(e.target.value)
+  //   const selectedProduct=productsData.find
+  //   setSelectedProduct([selectedProduct])
+  //    console.log(search);
+  // }
+
+  const searchInput = (e) => {
+    setSearch(e.target.value) ;
+    // setSearch.productsData
+    console.log(search);
+  }
+
+//   useEffect(() => {  
+//     // setSearch(e.target.value)
+//     productsData.find(val => {
+//       if(val.productsData.toLowerCase().includes(search.toLowerCase())){
+
+//       }
+//     })
+// }, [])
+  
+
   return ( 
     <>
       <div className="search-box product-search"> 
@@ -82,6 +106,7 @@ useEffect(() => {
             placeholder="select product" 
           />
         </div> 
+        <input type="text" placeholder='search' onChange={(e) => searchInput(e)} />
       </div>
     </> 
   );
