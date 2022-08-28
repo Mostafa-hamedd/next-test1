@@ -7,7 +7,7 @@ function ProductSearch({productsData , setSelectedProduct,categoryData}) {
   const [productsSelect, setProductsSelect] = useState("")
   const [categoryProducts, setCategoryProducts] = useState()
   const [productsOptions, setProductsOptions] = useState()
-  const [recipesOptions, setRecipesOptions] = useState()
+  // const [recipesOptions, setRecipesOptions] = useState()
  
   const productRef = useRef() 
 
@@ -50,20 +50,7 @@ useEffect(() => {
     })
     setProductsOptions(productsSelect)
 }, [categoryProducts])
-
-  //to fill recipe options
-  // useEffect(() => {
-  //     let recipesSelect = [];
-  //     productsData?.map((pro, index) => {
-  //     pro.slug == productsSelect &&
-  //         pro.recipes.map(recipe => {
-  //             recipesSelect.push({
-  //                 label: recipe.name,
-  //                 value: recipe.slug,
-  //             })
-  //         }) 
-  //     })
-  //     setRecipesOptions(recipesSelect)
+ 
   // }, [productsSelect,productsData])
 
   const searchProducts = (option) => {
@@ -94,11 +81,7 @@ useEffect(() => {
               }
             placeholder="select product" 
           />
-        </div>
-
-        <button 
-        type="submit"
-        >search</button>
+        </div> 
       </div>
     </> 
   );

@@ -24,13 +24,17 @@ function Filter() {
       setProductsData(productData)
     }
    },[productData,productSuccees]) 
+
    useEffect(()=>{
     setSelectedProduct(productsData)
    },[productsData])
 
   return (
     <div>
-      <ProductSearch productsData={productsData} categoryData={categoryData} setSelectedProduct={setSelectedProduct}/>
+      <ProductSearch 
+        productsData={productsData} 
+        categoryData={categoryData} 
+        setSelectedProduct={setSelectedProduct}/>
       <Products productsData={selectedProduct}/>
     </div>
   );
@@ -41,8 +45,8 @@ export default Filter;
 export async function getServerSideProps () {
   
   const queryClient = new QueryClient()
-  const page='about'
-  await queryClient.prefetchQuery(['categories'], ()=>getData("categories"))
+  const page='category'
+  await queryClient.prefetchQuery(['categories'], ()=>getData("categories")),
   await queryClient.prefetchQuery(['productData'], ()=>getData("productData"))
   return {
     props: {
