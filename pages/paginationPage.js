@@ -22,9 +22,9 @@ const paginationPage = () => {
       {data.id}
     </div>
     ))}
-    {arr.map((no,index)=>(
-      <div onClick={()=>{setPage(no)}}>
-        {no}
+    {arr.map((number,index)=>(
+      <div onClick={()=>{setPage(number)}}>
+        {number}
       </div>
     ))}
     <div onClick={()=>{setPage(++page)}}>next</div>
