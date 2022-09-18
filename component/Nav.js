@@ -48,6 +48,13 @@ const { locale, asPath} = useRouter();
           </Link>
         </li> 
         <li>
+          <Link href='/paginationPage'>
+            <a className={asPath === '/paginationPage' ?  "active" : ""}>
+            paginationPage 
+            </a>
+          </Link>
+        </li> 
+        <li> 
           <LangSwitcher>
             <div className="">
             {locale == "en" ? "ar" : "en"}
