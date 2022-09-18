@@ -7,6 +7,7 @@ function ProductSearch({productsData , setSelectedProduct,categoryData}) {
   const [productsSelect, setProductsSelect] = useState("")
   const [categoryProducts, setCategoryProducts] = useState()
   const [productsOptions, setProductsOptions] = useState()
+  const [search, setSearch] = useState('')
   // const [recipesOptions, setRecipesOptions] = useState()
   const [search, setSearch] = useState("")
  
