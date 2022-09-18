@@ -6,7 +6,7 @@ function ProductCard({
   cardSlug, 
 }) {
   return (
-    <div>
+    <div> 
        <span>{cardText}</span>
        <p>{cardDescription} </p>  
     </div>

@@ -8,6 +8,7 @@ function ProductSearch({productsData , setSelectedProduct,categoryData}) {
   const [categoryProducts, setCategoryProducts] = useState()
   const [productsOptions, setProductsOptions] = useState()
   // const [recipesOptions, setRecipesOptions] = useState()
+  const [search, setSearch] = useState("")
  
   const productRef = useRef() 
 
@@ -60,6 +61,21 @@ useEffect(() => {
     setSelectedProduct([selectedProduct])
   }
 
+  //search input
+
+  const searchInput = (e) => {
+    setSearch(e.target.value)
+    console.log(search);
+    productsData.find(item => {
+      if(search === ""){
+        return item;
+      }else{
+        item.name.toLowerCase().includes(search.toLowerCase())
+        return item;
+      }
+    })
+  }
+
   return ( 
     <>
       <div className="search-box product-search"> 
@@ -81,7 +97,7 @@ useEffect(() => {
               }
             placeholder="select product" 
           />
-        </div> 
+        </div>  
       </div>
     </> 
   );

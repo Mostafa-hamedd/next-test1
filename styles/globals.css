@@ -32,3 +32,6 @@ a {
 .active {
   color: #DDD;
 }
+:lang(ar) {
+  direction: rtl;
+}
