@@ -9,7 +9,7 @@ function ProductSearch({productsData , setSelectedProduct,categoryData}) {
   const [productsOptions, setProductsOptions] = useState()
   const [search, setSearch] = useState('')
   // const [recipesOptions, setRecipesOptions] = useState()
-  const [search, setSearch] = useState("")
+  // const [search, setSearch] = useState("")
  
   const productRef = useRef() 
 
