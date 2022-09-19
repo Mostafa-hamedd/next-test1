@@ -32,6 +32,37 @@ a {
 .active {
   color: #DDD;
 }
+.data{
+  display: flex;
+}
+.data-list{
+  display: flex;
+  width: 100%; 
+  flex-wrap: wrap;
+
+}
+.data-item{
+  width: 10%;
+  padding: 1rem;
+  list-style: none;
+}
+
+.pagination{
+  max-width: 700px;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+.btn-next{
+  background-color: aqua;
+}
+.active-btn{
+  background-color: blue;
+}
+.btn-back{
+  background-color: brown;
+}
 :lang(ar) {
   direction: rtl;
 }
