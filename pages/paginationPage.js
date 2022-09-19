@@ -45,6 +45,7 @@ const paginationPage = () => {
         nextLabel="next >"
         onPageChange={handlePage}
         pageRangeDisplayed={5}
+        className="pagination-list"
         pageCount={500}
         previousLabel="< previous"
         renderOnZeroPageCount={null}

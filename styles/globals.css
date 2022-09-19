@@ -63,6 +63,38 @@ a {
 .btn-back{
   background-color: brown;
 }
+.pagination-list{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  list-style: none;
+  align-items: center;
+}
+
+.pagination-list li {
+ margin: 0.5rem;
+ padding: 0.2rem 0.8rem;
+ cursor: pointer;
+}
+
+.pagination-list li:hover{
+  background: turquoise;
+  color: #fff; 
+  border-radius: 50%;
+}
+.pagination-list .selected{ 
+  padding: 0.2rem 0.8rem;
+  border-radius: 50%;
+  background: turquoise;
+  color: #fff; 
+}
+.pagination-list .previous {
+ 
+}
+.pagination-list .next {
+ 
+}
 :lang(ar) {
   direction: rtl;
 }
