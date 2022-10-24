@@ -2,10 +2,11 @@ import React, { Fragment } from 'react'
 import Nav from './Nav'
 import Head from "next/head";
 import styles from "../styles/Layout.module.css"
+import { IsMobileProvider } from '../contexts/isMobileContext';
 
 const Layout = ({children}) => {
   return (
-    <Fragment>
+    <Fragment> 
     <Head>
       <title>Test</title>
       <link
@@ -15,9 +16,11 @@ const Layout = ({children}) => {
         
     </Head>
       <Nav />
-        <main className={styles.main}>
-          {children}
-        </main>
+    <IsMobileProvider>
+      <main className={styles.main}>
+        {children}
+      </main>
+    </IsMobileProvider>
     </Fragment>
   )
 }

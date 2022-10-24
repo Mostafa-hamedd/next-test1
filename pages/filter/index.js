@@ -9,8 +9,8 @@ function Filter() {
   const { data: productData ,
           isSuccess :productSuccees
         } = useQuery(['products'], ()=>getData("products"))  
-  const [categoryData, setCategoryData] = useState()
   const [productsData, setProductsData] = useState()
+  const [categoryData, setCategoryData] = useState()
   const [selectedProduct, setSelectedProduct] = useState()
  
 

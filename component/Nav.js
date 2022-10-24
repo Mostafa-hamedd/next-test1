@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useState } from 'react';
 
 import navStyles from "../styles/Home.module.css"   
 import LangSwitcher from './common/LangSwitcher';
@@ -7,6 +8,7 @@ import LangSwitcher from './common/LangSwitcher';
 const Nav = () => {
    
 const { locale, asPath} = useRouter();
+const [count, setCount] = useState(0)
 
 
   return (
@@ -60,6 +62,11 @@ const { locale, asPath} = useRouter();
             {locale == "en" ? "ar" : "en"}
             </div>
           </LangSwitcher>
+        </li>
+        <li> 
+           <a href='/card'>
+              Card ({count})
+           </a>
         </li>
       </ul> 
     </nav>

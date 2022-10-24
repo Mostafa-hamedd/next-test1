@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState , useContext } from "react";
 import ReactPaginate from 'react-paginate';
+import { isMobileContext } from "../contexts/isMobileContext"
 
 
 const paginationPage = () => {
+  const { isMobileState } = useContext(isMobileContext)
+	const [isMobile, setMobile] = isMobileState
   const [page,setPage]=useState(1)
   const [data, setData] = useState([])
 
@@ -26,6 +29,7 @@ const paginationPage = () => {
   return (
     <>
     <div className="data">
+    {!isMobile ? (
       <ul className="data-list">
         {data?.results?.map((data,index)=>(
         <li className="data-item"  key={index}>
@@ -34,6 +38,9 @@ const paginationPage = () => {
         ))}
         {data.page}
       </ul>
+    ) : (
+      ""
+    )}
     </div>
     {/* {arr.map((number,index)=>(
       <div onClick={()=>{setPage(number)}}>
