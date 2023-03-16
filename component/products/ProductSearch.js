@@ -64,18 +64,18 @@ useEffect(() => {
 
   //search input
 
-  const searchInput = (e) => {
-    setSearch(e.target.value)
-    console.log(search);
-    productsData.find(item => {
-      if(search === ""){
-        return item;
-      }else{
-        item.name.toLowerCase().includes(search.toLowerCase())
-        return item;
-      }
-    })
-  }
+  // const searchInput = (e) => {
+  //   setSearch(e.target.value)
+  //   console.log(search);
+  //   productsData.find(item => {
+  //     if(search === ""){
+  //       return item;
+  //     }else{
+  //       item.name.toLowerCase().includes(search.toLowerCase())
+  //       return item;
+  //     }
+  //   })
+  // }
 
   return ( 
     <>

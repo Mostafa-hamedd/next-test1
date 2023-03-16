@@ -64,6 +64,11 @@ const [count, setCount] = useState(0)
           </LangSwitcher>
         </li>
         <li> 
+          <a href='/animation'>
+             animation
+           </a>
+        </li>
+        <li> 
            <a href='/card'>
               Card ({count})
            </a>

@@ -37,8 +37,7 @@ export default function Home() {
    return (
     <div>  
       <h2>{t("home.title")}</h2>
-      <ArticleList  articles={articles}/>
-       
+      <ArticleList  articles={articles}/> 
     </div>
     )
   }
